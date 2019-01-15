@@ -24,16 +24,14 @@ public class Aufgabe3
 
     }
 
-    public static void checkEmail(String email) throws Exception  // Methode checkEmail, throws Konstrukt Exceptions an aufrufende Methode weitergeleitet, singnalisiert ein Methode die nicht lokal abfängt, sondern Fehlerbehandlung Aufrufer überlasst
+    public static boolean checkEmail(String email) throws Exception  // Methode checkEmail, throws Konstrukt Exceptions an aufrufende Methode weitergeleitet, singnalisiert ein Methode die nicht lokal abfängt, sondern Fehlerbehandlung Aufrufer überlasst
     {
+        // boolean weil es verglichen wird
 
-        Pattern pattern = Pattern.compile("[\\w|-]+@\\w[\\w|-]*\\.[a-z]{2,3}"); // Pattern/Matcher Konstrukt, wenn hinten mehr als 2 Zeichen geht es nicht
+        Pattern pattern = Pattern.compile("[\\w|-]+@\\w[\\w|-]*\\.[a-z]{2,3}$"); // Pattern/Matcher Konstrukt, wenn hinten mehr als 3 Zeichen geht es nicht
         Matcher m = pattern.matcher(email);
 
-        if (m.find()) //  wenn Methode m.find, mit neuer Exception ausgeben
-        {
-            throw new Exception(); // ausgeben, throws Konstrukt Exception
-        }
+        return m.find(); // Methode ausgeben
 
     }
 }
