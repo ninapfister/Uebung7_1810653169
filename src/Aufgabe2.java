@@ -19,11 +19,11 @@ public class Aufgabe2
             }
 
 
-            catch(NumberFormatException ex) // NumberFormat - versucht string in numerischen Tyo umzuwandeln, string hat nicht entsprechendes Format, man kann mehrere catch haben, geht durch
+            catch(NumberFormatException nfex) // NumberFormat - versucht string in numerischen Tyo umzuwandeln, string hat nicht entsprechendes Format, man kann mehrere catch haben, geht durch
             {
                 JOptionPane.showMessageDialog(null, "Sie haben einen String eingegeben!");
 
-                // damit es ganz oben ist null bei showMessageDialig, Ausgabe wenn keine Zahl eingegeben wurde
+                // damit es ganz oben ist null bei showMessageDialog, Ausgabe wenn keine Zahl eingegeben wurde
             }
 
         }
