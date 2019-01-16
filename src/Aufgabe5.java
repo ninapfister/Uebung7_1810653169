@@ -1,8 +1,9 @@
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 
 public class Aufgabe5
 {
-    public static void main (String[]args)
+    public static void main (String[]args) throws FileNotFoundException // nicht vollständig
     {
         // Unterschied checked und unchecked Exception
         // bei checked Exceptions überprüft der Compiler, ob diese entsprechend behandelt werden

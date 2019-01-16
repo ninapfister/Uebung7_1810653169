@@ -6,6 +6,7 @@ public class Aufgabe3
 {
     public static void main (String[]args)
     {
+
         try // soll prüfen ob ein String Email ist
         {
 
@@ -17,21 +18,24 @@ public class Aufgabe3
 
         }
 
-        catch(Exception ex) // wenn ein falsches Format eingegeben wird
+        catch(Exception ex) // neue exception, wenn ein falsches Format eingegeben wird
         {
             JOptionPane.showMessageDialog(null, "Sie haben keine gültige E-Mail Adresse eingegeben!"); // wird das ausgegeben
         }
 
     }
 
-    public static boolean checkEmail(String email) throws Exception  // Methode checkEmail, throws Konstrukt Exceptions an aufrufende Methode weitergeleitet, singnalisiert ein Methode die nicht lokal abfängt, sondern Fehlerbehandlung Aufrufer überlasst
+    public static void checkEmail(String email) throws Exception  // Methode checkEmail, throws Konstrukt Exceptions an aufrufende Methode weitergeleitet, singnalisiert ein Methode die nicht lokal abfängt, sondern Fehlerbehandlung Aufrufer überlasst
     {
         // boolean weil es verglichen wird
 
         Pattern pattern = Pattern.compile("[\\w|-]+@\\w[\\w|-]*\\.[a-z]{2,3}$"); // Pattern/Matcher Konstrukt, wenn hinten mehr als 3 Zeichen geht es nicht
         Matcher m = pattern.matcher(email);
 
-        return m.find(); // Methode ausgeben
+        if (!m.find()) //wenn es nicht findet dann erstelle eine neue Exception, also wenn hinter mehr als 3 sind oder vorne weniger als 2
+        {
+            throw new Exception();
+        }
 
     }
 }
