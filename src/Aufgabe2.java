@@ -7,6 +7,8 @@ public class Aufgabe2
         while(true) // weil er solange einlesen soll, bis eine Zahl herauskommt
         {
 
+            //wird dafür verwendet mögliche Fehler (exceptions) innerhalb dieses Codeabschnittes abzufangen, sodass man darauf reagieren kann, wird geworfen, wer fängt es?
+
             try // soll eine Zahl versuchen, wenn man Zahl eingibt ok, sonst geht er ins catch und gibt aus dass keine Zahl eingegeben wurde
             {
 

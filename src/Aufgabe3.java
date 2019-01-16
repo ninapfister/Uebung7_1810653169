@@ -32,7 +32,7 @@ public class Aufgabe3
         Pattern pattern = Pattern.compile("[\\w|-]+@\\w[\\w|-]*\\.[a-z]{2,3}$"); // Pattern/Matcher Konstrukt, wenn hinten mehr als 3 Zeichen geht es nicht
         Matcher m = pattern.matcher(email);
 
-        if (!m.find()) //wenn es nicht findet dann erstelle eine neue Exception, also wenn hinter mehr als 3 sind oder vorne weniger als 2
+        if (!m.find()) //wenn es nicht findet dann erstelle eine neue Exception, also wenn hinter mehr als 3 sind oder vorne weniger als 2, gibt er eine Fehlermeldung aus
         {
             throw new Exception();
         }
